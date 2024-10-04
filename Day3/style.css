@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.gridcontainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(195, 255, 255);
+}
+.fitems{
+    background-color: rgb(22, 188, 171);
+    border: 5px solid rgb(4, 113, 102);
+    padding: 40px;
+    margin: 5px;
+}
+.i1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.i2{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
