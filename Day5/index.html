@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <!-- <button onmouseover="display()">Click Here</button>
+    <p></p>
+    <p></p>
+    <script>
+        let p1=document.querySelectorAll('p');
+        let display=()=>{
+            p1[0].innerHTML="Updated";
+            p1[0].style.backgroundColor='plum';
+            p1[1].innerHTML="Updated";
+            p1[1].style.backgroundColor='plum';
+        }
+    </script> -->
+
+
+    <!-- <a href="https://abes.ac.in">ABES Website</a>
+    <button onclick="display()">Change Link</button>
+    <script>
+        let link=document.querySelector('a');
+        let b=1
+        let display=()=>{
+            if(b){
+                link.setAttribute('href','https://aktu.ac.in');
+                link.innerText="AKTU Website";
+                b=0
+            }
+            else{
+                link.setAttribute('href','https://abes.ac.in');
+                link.innerText="ABES Website"; 
+                b=1             
+            }
+        }
+    </script> -->
+
+
+    <!-- <button onclick="display()">Click Here</button>
+    <script>
+        let display=()=>{
+        const newDiv = document.createElement('div');
+        newDiv.textContent='This is new div';
+
+        let b=document.querySelector('body');
+        b.appendChild(newDiv)
+        }
+    </script> -->
+
+    <!-- <button>Click Here</button>
+    <script>
+        let h=()=>{
+            alert("new func");
+        }
+        let btn=document.querySelector('button');
+        //btn.addEventListener('click',()=>alert('Hello!!!'));
+        btn.addEventListener('click',h);
+    </script> -->
+
+    <input type="text" id="myinput" placeholder="text here...">
+    <p class="keypressed">Keypressed</p>
+    <script>
+        const handlekeypress=(event)=>{
+            document.querySelector('.keypressed').textContent=event.target.value;
+        }
+        let myinput=document.getElementById('myinput');
+        myinput.addEventListener('keydown',handlekeypress);
+    </script>
+</body>
+</html>
