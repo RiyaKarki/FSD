@@ -1,23 +1,39 @@
 import React from 'react'
+import "bootstrap/dist/css/bootstrap.min.css"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+const Login = ({ regLogin }) => {
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
 
-const Login = () => {
+    const navigate = useNavigate();
+
+    const handlelogin = (e)=>{
+        e.preventDefault();
+        if (regLogin.email === email && regLogin.password === password){
+            alert("Login Successful!");
+            navigate("/dashboard");
+        }else{
+            alert("Login Failed! Please check your credentials.");
+        }
+    }
   return (
     <div>
         <form>
             <div className="form-group">
                 <label for="name">Name:</label>
-                <input type="email" className="form-control" id="name"/>
+                <input type="name" className="form-control" id="name"/>
             </div>        
             <div class="form-group">
                 <label for="email">Email address:</label>
-                <input type="email" className="form-control" id="email"/>
+                <input type="email" onChange={(e)=>{setEmail(e.target.value)}} className="form-control" id="email"/>
             </div>
             <div class="form-group">
                 <label for="pwd">Password:</label>
-                <input type="password" className="form-control" id="pwd"/>
+                <input type="password" onChange={(e)=>{setPassword(e.target.value)}} className="form-control" id="pwd"/>
             </div>
             <br></br>
-            <button type="submit" className="btn btn-success">Login</button>
+            <button type="submit" onClick={handlelogin} className="btn btn-success">Login</button>
         </form>
     </div>
   )

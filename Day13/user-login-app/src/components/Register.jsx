@@ -1,5 +1,5 @@
 import React,{useState}  from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 const Register = ({ regData }) => {
 
     const [name,setName]=useState();
@@ -15,7 +15,7 @@ const Register = ({ regData }) => {
 
   return (
     <div>
-        {name},{email},{password}
+        {name} {email} {password}
         <form>
             <div className="form-group">
                 <label htmlFor="name">Name:</label>
